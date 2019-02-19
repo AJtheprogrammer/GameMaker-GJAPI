@@ -58,7 +58,7 @@
 			</tr>
 			
 			<!-- UPDATING COMMANDS -->
-			<tr class="header"><th id="UpdateCommands" colspan="2">Update Commands</th></tr>
+<tr class="header"><th id="UpdateCommands" colspan="2">Update Commands</th></tr>
 			<tr><td colspan="2">Sometimes you need to update data, not just set it to something new. Take global enemy kills, for example. If you just fetch the data, modify it locally, and store it back online, you miss the chance to account for people who may have stored their data in between the time you've been modifying and storing it. By letting Game Jolt update the value, however, it ensures that all of the updates are accounted for because the server must process updates one at a time. As an added benefit, the new value the server holds after applying your update is downloaded and stored into your local data store.</td></tr>
 			<tr>
 				<th>
@@ -86,7 +86,7 @@
 			</tr>
 			
 			<!-- CLEARING COMMANDS -->
-			<tr class="header"><th id="ClearCommands" colspan="2">Clearing Commands</th></tr>
+<tr class="header"><th id="ClearCommands" colspan="2">Clearing Commands</th></tr>
 			<tr>
 				<th id="GJ_cleanUp">GJ_cleanUp()</th>
 				<td>Wipes all data that the API may have downloaded. In order to use any API commands again after this, you must call <a class="commandName" href="#GJ_begin">GJ_begin()</a> again.<br /><br />
@@ -128,7 +128,7 @@
 			</tr>
 			
 			<!-- REMOVAL COMMANDS -->
-			<tr class="header"><th id="RemoveCommands" colspan="2">Removal Commands</th></tr>
+<tr class="header"><th id="RemoveCommands" colspan="2">Removal Commands</th></tr>
 				<tr>
 					<th id="GJ_remove_data"><span id="GJ_remove_userKey">GJ_remove_userData(now?, key)</span><br /><span id="GJ_remove_globalKey">GJ_remove_globalData(now?, key)</span></th>
 					<td>Removes the given key from the local and online data storage. The global storage when using the global version, and the currently logged in user's storage when using the user version.<br /><br />
@@ -142,7 +142,7 @@
 				</tr>
 				
 			<!-- SESSION COMMANDS -->
-			<tr class="header"><th id="SessionCommands" colspan="2">Session Commands</th></tr>
+<tr class="header"><th id="SessionCommands" colspan="2">Session Commands</th></tr>
 				<tr>
 					<th id="GJ_isActive">GJ_isActive()</th>
 					<td><strong>Returns: </strong>
@@ -161,7 +161,7 @@
 				</tr>
 				
 			<!-- FETCHING COMMANDS -->
-			<tr class="header"><th id="FetchCommands" colspan="2">Fetching Commands</th></tr>
+<tr class="header"><th id="FetchCommands" colspan="2">Fetching Commands</th></tr>
 			<tr><td colspan="2">Fetch commands (and all commands that actually connect to Game Jolt) have a special argument called <span class="returnValue">now?</span><br />When set to true, this argument will allow you to stop the game from continuing until all of the requested data has been downloaded. When false, it will be worked on in the background and the game will continue normally.</td></tr>
 			<tr>
 				<th id="GJ_fetch_user">GJ_fetch_user(now?, userID)</th>
@@ -234,7 +234,7 @@
 			</tr>
 				
 			<!-- STORAGE COMMANDS -->
-			<tr class="header"><th id="StoreCommands" colspan="2">Storage Commands</th></tr>
+<tr class="header"><th id="StoreCommands" colspan="2">Storage Commands</th></tr>
 				<tr><td colspan="2">Store commands (and all commands that actually connect to Game Jolt) have a special argument called <span class="returnValue">now?</span><br />When set to true, this argument will allow you to stop the game from continuing until all of the requested data has been downloaded. When false, it will be worked on in the background and the game will continue normally.</td></tr>
 			<tr>
 				<th id="GJ_store_data"><span id="GJ_store_userData">GJ_store_userData(now?, key)</span><br /><span id="GJ_store_globalData">GJ_store_globalData(now?, key)</span><br /><span id="GJ_store_userFile">GJ_store_userFile(now?, key, file)</span><br /><span id="GJ_store_globalFile">GJ_store_globalFile(now?, key, file)</span></th>
@@ -282,7 +282,7 @@
 			</tr>
 				
 			<!-- USER COMMANDS -->
-			<tr class="header"><th id="UserCommands" colspan="2">User Commands</th></tr>
+<tr class="header"><th id="UserCommands" colspan="2">User Commands</th></tr>
 			<tr><td colspan="2">The userID argument requested in the following commands are the userIDs found on the Game Jolt website. For example, my user ID is 1165 (as can be seen by visiting my <a target="_blank" href="http://gamejolt.com/profile/thatbrod/1165/">Game Jolt profile</a> (Look at the url!)) and so I'd access my data by using <span class="commandName">GJ_user_*(1165)</span><br /><br />
 			Using <em>0</em> as the userID is a special case. It is recognized as the currently logged in user. Also, if <a class="commandName" href="#GJ_login">GJ_login()</a> is successful, <a class="commandName" href="#GJ_user_isReady">GJ_user_isReady(0)</a> will always return true until that user logs out.</td></tr>
 			<tr>
@@ -331,7 +331,7 @@
 			</tr>
 			
 			<!-- TROPHY COMMANDS -->
-			<tr class="header"><th id="TrophyCommands" colspan="2">Trophy Commands</th></tr>
+<tr class="header"><th id="TrophyCommands" colspan="2">Trophy Commands</th></tr>
 			<tr><td colspan="2">The trophyID argument used in the following commands are the same found on the Game Jolt achievements tab of your game. Each trophy you add will have its own ID, which you use here to access the trophy data. Of course, you could always just  set the trophy data in your game yourself, but the option is available to you.<br/><br/>To have users achieve trophies, see <a href="#GJ_store_trophyEarned" class="commandName">GJ_store_trophyEarned()</a>.</td></tr>
 			<tr>
 				<th id="GJ_trophiesReady">GJ_trophiesReady()</th>
@@ -364,7 +364,7 @@
 			</tr>
 			
 			<!-- DATA STORAGE COMMANDS -->
-			<tr class="header"><th id="GJ_data_" colspan="2">Data Storage Commands</th></tr>
+<tr class="header"><th id="GJ_data_" colspan="2">Data Storage Commands</th></tr>
 			<tr>
 				<th id="GJ_data_user_getters"><span id="GJ_data_user_getReal">GJ_data_user_getReal(key)</span><br /><span id="GJ_data_global_getReal">GJ_data_global_getReal(key)</span></th>
 				<td><strong>Returns: </strong>
@@ -422,7 +422,7 @@
 			
 			
 			<!-- TABLE COMMANDS -->
-			<tr class="header"><th id="GJ_table_" colspan="2">Highscore Table Commands</th></tr>
+<tr class="header"><th id="GJ_table_" colspan="2">Highscore Table Commands</th></tr>
 			<tr>
 				<th id="GJ_table_get_size"><span id="GJ_table_size">GJ_table_size(tableID)</span><br />
 				<span id="GJ_table_user_size">GJ_table_user_size(tableID)</span><br /></th>
