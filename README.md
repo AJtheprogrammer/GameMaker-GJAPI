@@ -8,7 +8,6 @@
 	<p>I've written a tutorial on the complete usage of this API <a href="https://github.com/thatbrod/GameMaker-GJAPI/blob/master/Tutorial.md" alt="Tutorial Page">here</a>. Please refer to that for instructions of use, as this page is dedicated to the descriptions of each individual command.</p>
 	<h3>Documentation</h3>
 	<table class="commandSet">
-			<!-- MAIN COMMANDS -->
 			<tr class="header"><th id="MainCommands" colspan="2">Main Commands</th></tr>
 			<tr>
 				<th id="GJ_begin">GJ_begin(gameID, privateKey)</th>
@@ -57,7 +56,6 @@
 				</td>
 			</tr>
 			
-			<!-- UPDATING COMMANDS -->
 <tr class="header"><th id="UpdateCommands" colspan="2">Update Commands</th></tr>
 			<tr><td colspan="2">Sometimes you need to update data, not just set it to something new. Take global enemy kills, for example. If you just fetch the data, modify it locally, and store it back online, you miss the chance to account for people who may have stored their data in between the time you've been modifying and storing it. By letting Game Jolt update the value, however, it ensures that all of the updates are accounted for because the server must process updates one at a time. As an added benefit, the new value the server holds after applying your update is downloaded and stored into your local data store.</td></tr>
 			<tr>
@@ -85,7 +83,6 @@
 				</ul></td>
 			</tr>
 			
-			<!-- CLEARING COMMANDS -->
 <tr class="header"><th id="ClearCommands" colspan="2">Clearing Commands</th></tr>
 			<tr>
 				<th id="GJ_cleanUp">GJ_cleanUp()</th>
@@ -127,7 +124,6 @@
 				<strong>Returns: </strong>Nothing</td>
 			</tr>
 			
-			<!-- REMOVAL COMMANDS -->
 <tr class="header"><th id="RemoveCommands" colspan="2">Removal Commands</th></tr>
 				<tr>
 					<th id="GJ_remove_data"><span id="GJ_remove_userKey">GJ_remove_userData(now?, key)</span><br /><span id="GJ_remove_globalKey">GJ_remove_globalData(now?, key)</span></th>
@@ -141,7 +137,6 @@
 					</ul></td>
 				</tr>
 				
-			<!-- SESSION COMMANDS -->
 <tr class="header"><th id="SessionCommands" colspan="2">Session Commands</th></tr>
 				<tr>
 					<th id="GJ_isActive">GJ_isActive()</th>
@@ -160,7 +155,6 @@
 					<td>Sets the rate at which to update the Game Jolt servers. By default, it's 30 seconds. You can set it to whatever you'd like, but be warned that if the user doesn't successfully ping into the Game Jolt server soon enough, the servers and the API will automatically log the user out.<br /><br /><strong>Returns: </strong>Nothing</td>
 				</tr>
 				
-			<!-- FETCHING COMMANDS -->
 <tr class="header"><th id="FetchCommands" colspan="2">Fetching Commands</th></tr>
 			<tr><td colspan="2">Fetch commands (and all commands that actually connect to Game Jolt) have a special argument called <span class="returnValue">now?</span><br />When set to true, this argument will allow you to stop the game from continuing until all of the requested data has been downloaded. When false, it will be worked on in the background and the game will continue normally.</td></tr>
 			<tr>
@@ -233,7 +227,6 @@
 				</ul></td>
 			</tr>
 				
-			<!-- STORAGE COMMANDS -->
 <tr class="header"><th id="StoreCommands" colspan="2">Storage Commands</th></tr>
 				<tr><td colspan="2">Store commands (and all commands that actually connect to Game Jolt) have a special argument called <span class="returnValue">now?</span><br />When set to true, this argument will allow you to stop the game from continuing until all of the requested data has been downloaded. When false, it will be worked on in the background and the game will continue normally.</td></tr>
 			<tr>
@@ -281,7 +274,6 @@
 				</ul></td>
 			</tr>
 				
-			<!-- USER COMMANDS -->
 <tr class="header"><th id="UserCommands" colspan="2">User Commands</th></tr>
 			<tr><td colspan="2">The userID argument requested in the following commands are the userIDs found on the Game Jolt website. For example, my user ID is 1165 (as can be seen by visiting my <a target="_blank" href="http://gamejolt.com/profile/thatbrod/1165/">Game Jolt profile</a> (Look at the url!)) and so I'd access my data by using <span class="commandName">GJ_user_*(1165)</span><br /><br />
 			Using <em>0</em> as the userID is a special case. It is recognized as the currently logged in user. Also, if <a class="commandName" href="#GJ_login">GJ_login()</a> is successful, <a class="commandName" href="#GJ_user_isReady">GJ_user_isReady(0)</a> will always return true until that user logs out.</td></tr>
@@ -320,7 +312,7 @@
 				<td>
 					These are the "getter" commands associated with users.<br /><br />
 					
-					<strong>Returns: </strong>
+<strong>Returns: </strong>
 					<ul>
 						<li><span class="returnValue">Corresponding value</span> - If the user is ready</li>
 						<li><span class="returnValue">N/A (string)</span> - If the user is not ready</li>
@@ -330,7 +322,7 @@
 				</td>
 			</tr>
 			
-			<!-- TROPHY COMMANDS -->
+<!-- TROPHY COMMANDS -->
 <tr class="header"><th id="TrophyCommands" colspan="2">Trophy Commands</th></tr>
 			<tr><td colspan="2">The trophyID argument used in the following commands are the same found on the Game Jolt achievements tab of your game. Each trophy you add will have its own ID, which you use here to access the trophy data. Of course, you could always just  set the trophy data in your game yourself, but the option is available to you.<br/><br/>To have users achieve trophies, see <a href="#GJ_store_trophyEarned" class="commandName">GJ_store_trophyEarned()</a>.</td></tr>
 			<tr>
@@ -353,8 +345,7 @@
 				<span id="GJ_trophy_isSilver">GJ_trophy_isSilver(trophyID)</span><br />
 				<span id="GJ_trophy_isPlatinum">GJ_trophy_isPlatinum(trophyID)</span></th>
 				<td>These are the "getter" commands associated with trophies.<br /><br />
-				
-				<strong>Returns: </strong>
+<strong>Returns: </strong>
 				<ul>
 					<li><span class="returnValue">Corresponding value</span> - If the trophies are ready</li>
 					<li><span class="returnValue">N/A (string)</span> - If the trophies aren't ready</li>
@@ -363,7 +354,6 @@
 				</ul></td>
 			</tr>
 			
-			<!-- DATA STORAGE COMMANDS -->
 <tr class="header"><th id="GJ_data_" colspan="2">Data Storage Commands</th></tr>
 			<tr>
 				<th id="GJ_data_user_getters"><span id="GJ_data_user_getReal">GJ_data_user_getReal(key)</span><br /><span id="GJ_data_global_getReal">GJ_data_global_getReal(key)</span></th>
